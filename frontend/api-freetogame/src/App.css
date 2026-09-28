@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+#root {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* SearchBar */
+form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+form input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background-color: #1e293b;
+  color: #f1f5f9;
+  font-size: 1rem;
+}
+
+form input:focus {
+  outline: 2px solid #38bdf8;
+}
+
+form button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background-color: #38bdf8;
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0ea5e9;
+}
+
+form button[type="button"] {
+  background-color: #334155;
+  color: #f1f5f9;
+}
+
+/* GameList — grid responsivo */
+.game-list, #root > div:has(> [class*="game"]) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+/* GameCard */
+.game-list > div, #root > div:has(> [class*="game"]) > div {
+  background-color: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #334155;
+  transition: transform 0.15s ease;
+}
+
+.game-list > div:hover {
+  transform: translateY(-4px);
+}
+
+.game-list img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.game-list h3 {
+  margin: 8px 12px 4px;
+  font-size: 1rem;
+}
+
+.game-list h3:first-of-type {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* Estados: loading, erro, vazio */
+.status-message {
+  text-align: center;
+  padding: 40px 16px;
+  font-size: 1.1rem;
+  color: #94a3b8;
+}
