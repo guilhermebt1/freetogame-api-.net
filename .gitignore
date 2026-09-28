@@ -1,0 +1,91 @@
+# ============================
+# 1. ARQUIVOS DO .NET / C# (Compilação e Runtime)
+# ============================
+[Bb]in/
+[Oo]bj/
+[Pp]ackages/
+*.msi
+*.msp
+*.nupkg
+*.snk
+*.pfx
+*.pdb
+
+# Arquivos de teste
+[Rr]elease/
+[Tt]estResults/
+*.coverage
+*.trx
+
+# Arquivos locais de usuário do Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+
+# Arquivos de configuração locais 
+appsettings.Development.json
+appsettings.*.local.json
+secrets.json
+
+# Ferramentas de cobertura e logs
+*.log
+*.cache
+*.tmp
+
+# ============================
+# 2. NODE.JS E REACT (Frontend)
+# ============================
+# Ignora node_modules em qualquer subpasta (ex: raiz, /ClientApp, /frontend)
+**/node_modules/
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/.pnpm-debug.log*
+**/package-lock.json 
+
+# Variáveis de ambiente do React
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+# Pastas de build do React
+**/build/
+**/dist/
+**/.cache/
+**/out/
+
+# ============================
+# 3. IDE - VISUAL STUDIO CODE
+# ============================
+.vscode/
+*.code-workspace
+.history/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.ide
+
+# ============================
+# 4. IDE - JETBRAINS RIDER (IntelliJ)
+# ============================
+.idea/
+*.sln.iml
+*.DotSettings.user
+*.iws
+*.swp
+*.swo
+*~
+
+# ============================
+# 5. SISTEMA OPERACIONAL E GERAL
+# ============================
+[Dd]esktop.ini
+*.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+~$*
